@@ -1,5 +1,6 @@
 const passwordChecker = require('./passwordChecker');
 
+
 test('Un mot de passe avec moins de 8 caractères échoue', () => {
     expect(passwordChecker('1234567')).toBe(false);
 });
