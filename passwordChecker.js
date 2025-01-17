@@ -1,12 +1,14 @@
 function passwordChecker(password) {
+    // Convertir en chaîne et nettoyer
     password = String(password).normalize('NFC').trim();
 
-    if (password.length < 8) return false;
-    if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) return false;
-    if (!/\d/.test(password)) return false;
-    if (/IPL/i.test(password)) return false;
+    // Vérifications
+    if (password.length < 8) return false; // Vérifie la longueur
+    if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) return false; // Vérifie les caractères spéciaux
+    if (!/\d/.test(password)) return false; // Vérifie les chiffres
+    if (/IPL/i.test(password)) return false; // Vérifie la présence de "IPL" (insensible à la casse)
 
-    return true;
+    return true; // Tout est valide
 }
 
 module.exports = passwordChecker;
