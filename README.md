@@ -8,8 +8,14 @@
 ## URL du projet
 - https://github.com/walid-gbil-vinci/IPL-social.git
 ## Description
+La fonction passwordChecker fait plusieurs vérifications :
 
-Ce projet contient une fonction JavaScript pour valider des mots de passe, avec une pipeline CI configurée pour exécuter les tests automatiquement lors de chaque PR vers la branche `main`.
+    Le mot de passe doit avoir au moins 8 caractères.
+    Il doit contenir au moins un caractère spécial (comme ! ou @).
+    Il doit inclure au moins un chiffre.
+    Il ne doit pas contenir "IPL" (en majuscules ou minuscules).
+
+Si le mot de passe respecte toutes ces règles, la fonction retourne true. Sinon, elle retourne false. J'ai aussi écrit des tests pour vérifier chaque règle et m'assurer que la fonction fonctionne correctement.
 
 ## Commandes
 
